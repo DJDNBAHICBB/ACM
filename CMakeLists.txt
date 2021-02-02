@@ -3,11 +3,11 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(untitled match.cpp)
+#add_executable(untitled binchaji.cpp)
 #add_executable(untitled sibianxinyouhua.cpp)
 #add_executable(untitled tuopu.cpp)
 #add_executable(untitled P2513.cpp)
-#add_executable(untitled match.cpp)
+add_executable(untitled main.cpp)
 #add_executable(untitled nonagression.cpp)
 #add_executable(untitled weightweighingbitset.cpp)
 #add_executable(untitled linetree.cpp)

@@ -122,32 +122,32 @@ untitled/fast:
 	$(MAKE) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/build
 .PHONY : untitled/fast
 
-match.obj: match.cpp.obj
+main.obj: main.cpp.obj
 
-.PHONY : match.obj
+.PHONY : main.obj
 
 # target to build an object file
-match.cpp.obj:
-	$(MAKE) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/match.cpp.obj
-.PHONY : match.cpp.obj
+main.cpp.obj:
+	$(MAKE) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/main.cpp.obj
+.PHONY : main.cpp.obj
 
-match.i: match.cpp.i
+main.i: main.cpp.i
 
-.PHONY : match.i
+.PHONY : main.i
 
 # target to preprocess a source file
-match.cpp.i:
-	$(MAKE) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/match.cpp.i
-.PHONY : match.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-match.s: match.cpp.s
+main.s: main.cpp.s
 
-.PHONY : match.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-match.cpp.s:
-	$(MAKE) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/match.cpp.s
-.PHONY : match.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -158,9 +158,9 @@ help:
 	@echo ... edit_cache
 	@echo ... untitled
 	@echo ... rebuild_cache
-	@echo ... match.obj
-	@echo ... match.i
-	@echo ... match.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 
