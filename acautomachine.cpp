@@ -63,23 +63,3 @@ void init()
     memset(cntword,0,sizeof(cntword));
     cnt = 0;
 }
-int main(){
-    int T;
-    ios::sync_with_stdio(0);
-    cin >> T;
-    while (T--)
-    {
-        init();
-        int n;
-        cin >> n;
-        for (int i = 1; i <= n; ++i) {
-            string s;
-            cin >> s;
-            insertWords(s);
-        }
-        getFail();
-        string s;
-        cin >> s;
-        cout << query(s) << endl;
-    }
-}
