@@ -7,20 +7,10 @@
 #IncludeRegexTransform: 
 
 C:/Users/acer/CLionProjects/untitled/main.cpp
-queue
--
-cstdlib
--
-cmath
--
-cstdio
--
-string
--
 cstring
 -
 iostream
 -
-algorithm
--
+string
+C:/Users/acer/CLionProjects/untitled/string
 

@@ -1,3 +1,6 @@
+
+//多模式串匹配
+
 #include <queue>
 #include <cstdlib>
 #include <cmath>
