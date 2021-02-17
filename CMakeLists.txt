@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 project(untitled)
 
 set(CMAKE_CXX_STANDARD 14)
-add_executable(untitled main.cpp)
+add_executable(untitled "lcs(multi).cpp")
 #add_executable(untitled "klengthmaxoccur(suffixmachine).cpp")
 #add_executable(untitled binchaji.cpp)
 #add_executable(untitled sibianxinyouhua.cpp)
