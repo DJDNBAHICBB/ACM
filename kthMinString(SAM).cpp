@@ -66,32 +66,45 @@ int solve() {
     }
     return ans;
 }
-int id[MAXN<<1];
-int weig[MAXN << 1];
-void getTuopu()
+int count[MAXN<<1];
+void dfs(int k)
 {
-    for (int k = 1; k <= tot; ++k) {       //给每个点赋权值
-        weig[len[k]] ++;
+    if (count[k]) return;
+    count[k] = 1;
+    for (int i = 0; i <= 26; ++i) {          //此处是实现算法的关键，通过从a遍历到z来计算字典序
+        if (!ch[k][i]) continue;
+        dfs(ch[k][i]);
+        count[k]+=count[ch[k][i]];       //很明显，count的意义就是字典序为k的子串的首字母
     }
-    for (int m = 1; m <= tot; ++m) {     //获得长度大于等于m的点的总个数，所以必然是不会相同的，故可以用来标记。
-        weig[m] += weig[m-1];
-    }
-    for (int n = 1; n <= tot; ++n) {  //根据点出现顺序获得拓扑序
-        id[weig[len[n]]--] = n;
-//        cout << weig[len[n]]+1 <<' ' << id[weig[len[n]]+1] << endl;
-    }
-//    for (int j = 1; j <= tot; ++j) {
-//        cout << id[j] << endl;
-//    }
 }
 int main() {
-//    freopen("in.txt","r",stdin);
-//    freopen("out.txt","w",stdout);
     scanf("%s", s + 1);
-    int len = strlen(s + 1);
-    for (int i = 1; i <= len; ++i) {
+    int l = strlen(s + 1);
+    for (int i = 1; i <= l; ++i) {
         add(s[i] - 'a');
     }
-    scanf("%s", s1 + 1);
-    cout << solve();
+    int T;
+    dfs(1);
+    scanf("%d",&T);
+    while (T--){
+        int k;
+        int now = 1;
+        scanf("%d",&k);
+        while (k)
+        {
+            if (!k) break;
+            for (int i = 0; i <= 26; ++i) {
+                if (ch[now][i]) {
+                    if (count[ch[now][i]] >= k) {     //因为不能往前找，所以找到的第一个大于k的就肯定是属于答案的子串中
+                        putchar(i+'a');
+                        --k;
+                        now = ch[now][i];
+                        break;
+                    } else
+                        k-=count[ch[now][i]];       //这个字母包含的不够多
+                }
+            }
+
+        }puts("");
+    }
 }

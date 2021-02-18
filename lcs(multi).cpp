@@ -89,15 +89,12 @@ int main() {
     for (int n = 1; n <= tot; ++n) {  //根据点出现顺序获得拓扑序
         id[anslen[len[n]]--] = n;
     }
-    int ct =  1;
     while (scanf("%s", s1 + 1)!=EOF)
     {
-        ++ct;
         solve();
     }
     for (int j = 1; j <= tot; ++j) {
         mx = max(mx,anslen[j]);
     }
-    if (ct == 1) printf("%d",l);
-    else printf("%d",mx);
+    printf("%d",mx);
 }

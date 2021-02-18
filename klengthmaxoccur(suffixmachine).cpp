@@ -48,15 +48,10 @@ void add(int c) {
 char s[MAXN<<1];
 int id[MAXN<<1];
 int ans[MAXN<<1];
-int main() {
-    scanf("%s", s + 1);
-    int l = strlen(s+1);
-    for (int i = 1; i <= l; ++i) {
-        add(s[i]-'a');
-    }
+void getTuopu()
+{
     for (int k = 1; k <= tot; ++k) {       //给每个点赋权值
         weig[len[k]] ++;
-
     }
     for (int m = 1; m <= tot; ++m) {     //获得长度大于等于m的点的总个数，所以必然是不会相同的，故可以用来标记。
         weig[m] += weig[m-1];
@@ -65,14 +60,22 @@ int main() {
         id[weig[len[n]]--] = n;
 //        cout << weig[len[n]]+1 <<' ' << id[weig[len[n]]+1] << endl;
     }
-//    for (int j = 1; j <= tot; ++j) {
-//        cout << id[j] << endl;
-//    }
+    for (int j = 1; j <= tot; ++j) {
+        cout << id[j] << endl;
+    }
+}
+int main() {
+    scanf("%s", s + 1);
+    int l = strlen(s+1);
+    for (int i = 1; i <= l; ++i) {
+        add(s[i]-'a');
+    }
+    getTuopu();
     for (int i = tot; i >= 1 ; --i) {
         size[fa[id[i]]] += size[id[i]];
         ans[len[id[i]]] = max(ans[len[id[i]]], size[id[i]]);
     }
 
     for(int i = tot; i >= 1; --i) ans[i] = max(ans[i], ans[i + 1]);
-    for(int i = 1; i <= l; ++i) printf("%d\n", ans[i]);
+//    for(int i = 1; i <= l; ++i) printf("%d\n", ans[i]);
 }

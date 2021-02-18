@@ -7,10 +7,6 @@
 #IncludeRegexTransform: 
 
 C:/Users/acer/CLionProjects/untitled/main.cpp
-cstring
+bits/stdc++.h
 -
-iostream
--
-string
-C:/Users/acer/CLionProjects/untitled/string
 
