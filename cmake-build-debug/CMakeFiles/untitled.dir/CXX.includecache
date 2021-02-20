@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/acer/CLionProjects/untitled/main.cpp
-bits/stdc++.h
+C:/Users/acer/CLionProjects/untitled/splay.cpp
+iostream
+-
+cstdio
 -
 
