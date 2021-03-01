@@ -5,7 +5,9 @@ set(CMAKE_CXX_STANDARD 14)
 
 
 #add_executable(untitled dijstra.cpp)
+#add_executable(untitled Suffixautomachine2.cpp)
 add_executable(untitled main.cpp)
+#add_executable(untitled PAM.cpp)
 #add_executable(untitled bfs.cpp)
 #add_executable(untitled "(dp)xuanxianfa.cpp")
 #add_executable(untitled BM.cpp)

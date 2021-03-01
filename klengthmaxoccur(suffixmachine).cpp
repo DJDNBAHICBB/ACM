@@ -53,15 +53,15 @@ void getTuopu()
     for (int k = 1; k <= tot; ++k) {       //给每个点赋权值
         weig[len[k]] ++;
     }
-    for (int m = 1; m <= tot; ++m) {     //获得长度大于等于m的点的总个数，所以必然是不会相同的，故可以用来标记。
+    for (int m = 1; m <= tot; ++m) {     //获得长度小于等于m的点的总个数，所以必然是不会相同的，故可以用来标记。
         weig[m] += weig[m-1];
     }
     for (int n = 1; n <= tot; ++n) {  //根据点出现顺序获得拓扑序
         id[weig[len[n]]--] = n;
-//        cout << weig[len[n]]+1 <<' ' << id[weig[len[n]]+1] << endl;
+//        cout << len[n] <<' ' << weig[len[n]]+1 << endl;
     }
     for (int j = 1; j <= tot; ++j) {
-        cout << id[j] << endl;
+//        cout << id[j] <<' ' << j <<endl;
     }
 }
 int main() {

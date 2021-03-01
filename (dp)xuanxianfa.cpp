@@ -24,9 +24,7 @@ int main() {
     for (int i = 1; i <= n; i++)
         for (int j = 1; j <= m; j++) {
             if (i > 1 && a[i][j] ^ a[i - 1][j])
-                up[i][j] = up[i - 1][j] + 1, left[i][j] = max(left[i][j],
-                                                              left[i - 1][j]), right[i][j] = min(right[i][j],
-                                                                                                 right[i - 1][j]);
+                up[i][j] = up[i - 1][j] + 1, left[i][j] = max(left[i][j],left[i - 1][j]), right[i][j] = min(right[i][j],right[i - 1][j]);
             int a = right[i][j] - left[i][j] + 1;
             int b = min(a, up[i][j]);
             ansa = max(ansa, b * b);
